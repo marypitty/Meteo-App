@@ -32,6 +32,12 @@
     color: rgb(26, 26, 100);
 }
 
+@media (max-width: 600px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
 .WeatherMain {
     display: block;
     border-radius: 10px;
