@@ -1,0 +1,59 @@
+<!-- <div class="col-md-6">
+    <h3 class="text-center my-4">Search for Weather:</h3>
+    <form>
+        <div class="form-group">
+            <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation" placeholder="Please input a Location" />
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-md">
+        Search for the weather
+      </button>
+        </div>
+    </form>
+</div>
+<div class="col-md-6">
+    <h3 class="text-center my-4">Weather Details:</h3>
+</div> -->
+
+
+
+
+
+
+
+<!-- <input [(ngModel)]="location" type="text" placeholder="Type city here..." />
+<button type="button" (click)="findWeather()">Click</button> -->
+
+<div class="container">
+
+    <h1 class="title">My Weather App</h1>
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Enter city here..." name="location" [(ngModel)]="location">
+        </mat-form-field>
+        <button mat-fab (click)="findWeather()">Search</button>
+    </form>
+
+    <div class="WeatherMain" *ngIf="hidden == true">
+
+        <div *ngIf="isDay" class="weatherWidgetRow icon">
+            <i class="fas fa-5x fa-sun sun"></i>
+        </div>
+
+        <div *ngIf="!isDay" class="weatherWidgetRow icon">
+            <i class="fas fa-5x fa-moon moon"></i>
+        </div>
+
+        <div class="weatherWidgetRow cloudDiv">
+            <i class="fas fa-4x fa-cloud cloud"></i>
+        </div>
+
+        <div class="weatherWidgetRow" id="temp_main">{{temp}}°</div>
+        <div class="weatherWidgetRow" id="temp">Min: {{temp_min}}° / Max: {{temp_max}}°</div>
+        <div class="weatherWidgetRow" id="temp">Feels Like: {{temp_feels_like}}°</div>
+        <div class="weatherWidgetRow" id="name">{{name}}</div>
+        <div class="weatherWidgetRow" id="humidity">Humidity: {{humidity}}%</div>
+    </div>
+
+</div>
